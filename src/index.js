@@ -11,3 +11,6 @@ const serverPort = 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
+
+const staticServerPathWeb = './src/public-react';
+server.use(express.static(staticServerPathWeb));

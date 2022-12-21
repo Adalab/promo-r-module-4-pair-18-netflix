@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/public-react && mv ./web/build ./src/public-react"
   },
   "author": "adalab",
   "license": "ISC",
