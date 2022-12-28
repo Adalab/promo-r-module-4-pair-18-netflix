@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 //const movies = require('./data/movies.json');
 const Database = require('better-sqlite3');
-const db = new Database('./db/database.db', { verbose: console.log });
+const db = new Database('./src/db/database.db', { verbose: console.log });
 // create and config server
 const server = express(); //creamos servidor, inicia el proceso de escuchar
 server.use(cors()); // configuramos el servidor para que sea una API pública, si quitamos cors será API privada
@@ -32,7 +32,6 @@ server.get('/movies', (req, res) => {
     success: true,
     movies: movies,
   };
-  console.log(movies);
+
   res.json(response);
 });
-//const db = new Database('./src/db/database.db', { ... });
