@@ -13,14 +13,6 @@ const serverPort = 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
-//Buscar película por id
-server.get('/movie/:movieId', (req, res) => {
-  console.log(req.query);
-  res.json({
-    success: 'true',
-    movies: { movies },
-  });
-});
 
 const staticServerPathWeb = './src/public-react';
 server.use(express.static(staticServerPathWeb));
